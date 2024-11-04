@@ -20,7 +20,7 @@ class TelegramBot
         $sendMessageCurl = curl_init();
         curl_setopt_array($sendMessageCurl, [
             CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => 'https://api.telegram.org/bot' . $bot . '/sendMessage?chat_id=' . $chatId . '&text=' . $message
+            CURLOPT_URL => 'https://api.telegram.org/bot' . $bot . '/sendMessage?chat_id=' . $chatId . '&text=' . urlencode($message)
         ]);
         $sendMessageCurlResponse = curl_exec($sendMessageCurl);
         $httpCode = curl_getinfo($sendMessageCurl)['http_code'];

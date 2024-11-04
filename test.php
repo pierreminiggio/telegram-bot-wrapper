@@ -9,5 +9,5 @@ require $projectDirectory . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 $config = require $projectDirectory . 'config.php';
 
 $bot = new TelegramBot($config['bot']);
-$messageId = $bot->sendMessageToChat($config['chatId'], 'Test wrapper');
+$messageId = $bot->sendMessageToChat($config['chatId'], "Test wrapper\non 2 lines");
 var_dump($messageId);
