@@ -10,6 +10,8 @@ class TelegramBot
 
     /**
      * @return int messageId
+     *
+     * @throws TelegramBotException
      */
     public function sendMessageToChat(string $chatId, string $message): int
     {
